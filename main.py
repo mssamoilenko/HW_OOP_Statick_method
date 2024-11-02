@@ -41,3 +41,29 @@ fahrenheit = 77
 celsius = TemperatureConverter.fahrenheit_to_celsius(fahrenheit)
 print(f"{fahrenheit}°F is {celsius}°C")
 print("Total temperature conversions:", TemperatureConverter.count_conversion())
+
+#task3
+class MetricImperialConverter:
+
+    @staticmethod
+    def meters_to_feet(meters):
+        return meters * 3.28084
+
+    @staticmethod
+    def feet_to_meters(feet):
+        return feet / 3.28084
+
+    @staticmethod
+    def kilometers_to_miles(kilometers):
+        return kilometers * 0.621371
+
+    @staticmethod
+    def miles_to_kilometers(miles):
+        return miles / 0.621371
+meters = 10
+feet = MetricImperialConverter.meters_to_feet(meters)
+print(f"{meters} meters is {feet} feet")
+
+miles = 5
+kilometers = MetricImperialConverter.miles_to_kilometers(miles)
+print(f"{miles} miles is {kilometers} kilometers")
